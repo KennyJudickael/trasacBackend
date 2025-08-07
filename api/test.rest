@@ -2,6 +2,29 @@ POST http://localhost:8000/api/transactions/
 Content-Type: application/json
 
 {
-    "text": "Sample transaction",
+    "text": "Sample transaction 3",
     "amount": 100.00
+}
+
+###
+GET http://localhost:8000/api/transactions/
+
+###
+DELETE http://localhost:8000/api/transactions/bf04c5fe-71b8-4f2d-b825-0543d8151bf8/
+
+###
+PUT http://localhost:8000/api/transactions/d9bfcab3-cfb9-41d1-952f-7b7eeff717f5/
+Content-Type: application/json
+
+{
+    "text": "Updated transaction",
+    "amount": 150.00
+}
+
+###
+PATCH http://localhost:8000/api/transactions/d9bfcab3-cfb9-41d1-952f-7b7eeff717f5/
+Content-Type: application/json
+
+{
+    "amount": 250.00
 }
